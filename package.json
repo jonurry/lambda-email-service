@@ -1,0 +1,36 @@
+{
+  "name": "lambda-email-service",
+  "version": "1.0.0",
+  "description": "AWS Lambda function (Node.js) to send email via Simple Email Service.",
+  "main": "handler.js",
+  "scripts": {
+    "debug": "node --nolazy --inspect-brk=9229 myProgram.js",
+    "deploy": "sls deploy -v",
+    "deploy-sendMessageViaEmail": "sls deploy function -f sendMessageViaEmail",
+    "invoke": "sls invoke -f sendMessageViaEmail",
+    "invoke-local": "sls invoke local -f sendMessageViaEmail -p ./tests/data.json",
+    "logs": "sls logs -f sendMessageViaEmail -t",
+    "serverless": "serverless",
+    "sls": "serverless",
+    "service-info": "sls info",
+    "test": "yarn test-email",
+    "test-email": "sls invoke local -f sendMessageViaEmail -p ./tests/email.json"
+  },
+  "repository": "git+https://github.com/jonurry/lambda-email-service.git",
+  "keywords": [],
+  "author": "Jon Urry <github@agileweb.co.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonurry/lambda-email-service/issues"
+  },
+  "homepage": "https://github.com/jonurry/lambda-email-service#readme",
+  "dependencies": {
+    "aws-sdk": "^2.235.1",
+    "serverless": "^1.27.2",
+    "yarn": "^1.6.0"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "private": null
+}
