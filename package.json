@@ -1,20 +1,25 @@
 {
   "name": "lambda-email-service",
   "version": "1.0.0",
-  "description": "AWS Lambda function (Node.js) to send email via Simple Email Service.",
+  "description":
+    "AWS Lambda function (Node.js) to send email via Simple Email Service.",
   "main": "handler.js",
   "scripts": {
     "debug": "node --nolazy --inspect-brk=9229 myProgram.js",
     "deploy": "sls deploy -v",
     "deploy-sendMessageViaEmail": "sls deploy function -f sendMessageViaEmail",
     "invoke": "sls invoke -f sendMessageViaEmail",
-    "invoke-local": "sls invoke local -f sendMessageViaEmail -p ./tests/data.json",
+    "invoke-local":
+      "sls invoke local -f sendMessageViaEmail -p ./tests/data.json",
     "logs": "sls logs -f sendMessageViaEmail -t",
     "serverless": "serverless",
     "sls": "serverless",
     "service-info": "sls info",
-    "test": "yarn test-email",
-    "test-email": "sls invoke local -f sendMessageViaEmail -p ./tests/email.json"
+    "test": "yarn test-email && yarn test-email-no-optional",
+    "test-email":
+      "sls invoke local -f sendMessageViaEmail -p ./tests/email.json",
+    "test-email-no-optional":
+      "sls invoke local -f sendMessageViaEmail -p ./tests/email-no-optional.json"
   },
   "repository": "git+https://github.com/jonurry/lambda-email-service.git",
   "keywords": [],
@@ -32,5 +37,5 @@
   "directories": {
     "test": "tests"
   },
-  "private": null
+  "private": false
 }

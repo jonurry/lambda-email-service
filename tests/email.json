@@ -1,5 +1,5 @@
 {
   "body":
-    "{\"name\": \"Sender Name\",\"email\": \"sender@email.com\",\"company\": \"Sender Company\",\"phone\": \"Sender Phone Number\",\"message\": \"Sender message\",\"ses_address\": \"jon@urry.me\",\"subject\": \"Message submitted on Portfolio (jon.urry.me)\"}",
+    "{\"name\": \"Sender Name\",\"email\": \"aws_sender@chimpster.com\",\"company\": \"Sender Company\",\"phone\": \"Sender Phone Number\",\"message\": \"Sender message\",\"ses_address\": \"jon@urry.me\",\"subject\": \"Message submitted on Portfolio (jon.urry.me)\"}",
   "headers": { "origin": "http://jon.urry.me" }
 }

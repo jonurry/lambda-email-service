@@ -13,15 +13,18 @@ function sendEmail(formData, callback) {
     Source: formData.ses_address, // SES SENDING EMAIL
     ReplyToAddresses: [formData.email],
     Destination: {
-      ToAddresses: [formData.ses_address] // SES RECEIVING EMAIL
+      ToAddresses: [formData.ses_address], // SES RECEIVING EMAIL
+      CcAddresses: [formData.email] // SES CC EMAIL
     },
     Message: {
       Body: {
         Text: {
           Charset: 'UTF-8',
-          Data: `${formData.message}\n\nName: ${formData.name}\nCompany: ${
-            formData.company
-          }\nEmail: ${formData.email}\nTel: ${formData.phone}`
+          Data: `${formData.message}\n\nName: ${
+            formData.name
+          }\nCompany: ${formData.company || 'None'}\nEmail: ${
+            formData.email
+          }\nTel: ${formData.phone || 'None'}`
         }
       },
       Subject: {
